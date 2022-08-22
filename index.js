@@ -1,13 +1,14 @@
 var started = true;
 var p = 0;
 var score = [0, 0, 0, 0];
+
 document.addEventListener("keypress", (event) => {
   console.log(event);
   if (event.key == "Enter") Main("roll");
   if (event.key == "Shift") Main("stop");
 });
 function run(op) {
-  var ti = 100;
+  var ti = 0;
   for (var i = 0; i < op.length; i++) {
     setTimeout(op[i][0], ti, op[i][1], op[i][2]);
     ti += 50;
