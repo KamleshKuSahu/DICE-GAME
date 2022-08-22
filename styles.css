@@ -1,0 +1,106 @@
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  position: fixed;
+  font-weight: bold;
+}
+.game {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  background-color: #defcf9;
+}
+.pl1,
+.pl2 {
+  display: inline-block;
+  height: 100%;
+  width: 50%;
+}
+.pl1,
+.pl2 {
+  background-color: rgba(166, 177, 225);
+  opacity: 0.7;
+}
+.pli,
+.img,
+.bt {
+  display: block;
+}
+.main {
+  height: 80%;
+  width: 80%;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  /* background-color: ; */
+}
+.img {
+  height: 40%;
+  width: 40%;
+  margin-bottom: 10%;
+}
+.bt,
+select,
+option {
+  background-color: #424874;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+}
+.pli,
+.bt,
+img {
+  margin: 0 auto;
+  height: 10%;
+}
+.bt {
+  width: 30%;
+}
+.pli {
+  width: 80%;
+  margin-top: 5%;
+  margin-bottom: 3%;
+}
+.roll {
+  margin-bottom: 1%;
+}
+.rol,
+.sto {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 50%;
+  height: 8%;
+}
+.sto {
+  bottom: 2%;
+}
+.rol {
+  bottom: 12%;
+}
+p {
+  color: brown;
+  margin: 0 auto;
+  display: table;
+  background-color: #dcd6f7;
+}
+.head {
+  font-size: 2rem;
+  font-family: "DynaPuff", cursive;
+  text-align: center;
+}
+.score1,
+.score2 {
+  text-align: center;
+  font-size: 4rem;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: wheat;
+  margin-bottom: 2%;
+}
