@@ -64,17 +64,13 @@ function rolling(dice) {
 
   oper.push([check, 1, 1]);
   oper.push([checkwin, 0, 0]);
+  oper.push([comp, 1, 1]);
   run(oper);
 }
 function xyz(dice, k) {
   score[dice - 1] += k + 1;
   document.querySelector(".score" + dice).innerHTML =
     "" + score[dice - 1] + "(" + score[dice + 1] + ")";
-  if (p == 1 && document.querySelector(".play2").value == "computer") {
-    var kkk = Math.floor(Math.random() * 100);
-    if (kkk % 2 == 0) Main("roll");
-    else Main("stop");
-  }
 }
 function xy(dice, k) {
   if (k == 0) {
@@ -90,11 +86,6 @@ function xy(dice, k) {
   if (d1 == 1) d2 = 2;
   document.querySelector(".pl" + d2).style.opacity = "1";
   document.querySelector(".pl" + d1).style.opacity = "0.5";
-  if (p == 1 && document.querySelector(".play2").value == "computer") {
-    var kkk = getRandom();
-    if (kkk % 2 == 0) Main("roll");
-    else Main("stop");
-  }
 }
 
 function set(dice, im) {
@@ -110,6 +101,23 @@ function Main(opt) {
   var checkt = check(opt, 1);
   if (checkt) {
     if (opt == "roll") rolling(p + 1);
-    else xy(p + 1, 1);
+    else {
+      var dice = p + 1,
+        k = 1;
+      var oper = [];
+      oper.push([xy, dice, k]);
+
+      oper.push([check, 1, 1]);
+      oper.push([checkwin, 0, 0]);
+      oper.push([comp, 1, 1]);
+      run(oper);
+    }
+  }
+}
+function comp(aa, bb) {
+  if (p == 1 && document.querySelector(".play2").value == "computer") {
+    var kkk = getRandom();
+    if (kkk % 2 == 0) Main("roll");
+    else Main("stop");
   }
 }
